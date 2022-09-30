@@ -37,6 +37,8 @@
 
 #define SC_Add		42
 #define SC_RandomNum 43
+#define SC_ReadString 44
+#define SC_PrintString 45
 
 #ifndef IN_ASM
 
@@ -106,8 +108,8 @@ typedef int OpenFileId;
  * the console device.
  */
 
-#define ConsoleInput	0  
-#define ConsoleOutput	1  
+// #define ConsoleInput 0
+// #define ConsoleOutput 1
  
 /* Create a Nachos file, with name "name" */
 /* Note: Create does not open the file.   */
@@ -179,6 +181,16 @@ void ThreadExit(int ExitCode);
  * Generates a random integer and returns it.
  */
 int RandomNum();
+
+/*
+ * Read a string of given length from console and save it to user space buffer.
+ */
+void ReadString(char* buffer, int length);
+
+/*
+ * Read a string of given length from console and save it to user space buffer.
+ */
+void PrintString(char* buffer);
 
 #endif /* IN_ASM */
 

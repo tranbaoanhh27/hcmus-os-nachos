@@ -25,6 +25,7 @@
 #include "main.h"
 #include "syscall.h"
 #include "ksyscall.h"
+#include "machine.h"
 //----------------------------------------------------------------------
 // ExceptionHandler
 // 	Entry point into the Nachos kernel.  Called when a user program
@@ -48,6 +49,56 @@
 //	is in machine.h.
 //----------------------------------------------------------------------
 
+void IncreasePC() {
+	kernel->machine->WriteRegister(PrevPCReg, kernel->machine->ReadRegister(PCReg));
+	kernel->machine->WriteRegister(PCReg, kernel->machine->ReadRegister(PCReg) + 4);
+	kernel->machine->WriteRegister(NextPCReg, kernel->machine->ReadRegister(PCReg)+4);
+}
+
+/*
+ * Input: - User space address (int)
+ * - Limit of buffer (int)
+ * Output:- Buffer (char*)
+ * Purpose: Copy buffer from User memory space to System memory space
+ */
+char* User2System(int virtAddr,int limit) {
+	int i;// index
+	int oneChar = 0;
+	char* kernelBuf = NULL;
+	kernelBuf = new char[limit +1];//need for terminal string
+	if (kernelBuf == NULL)
+		return kernelBuf;
+	memset(kernelBuf,0,limit+1);
+	//printf("\n Filename u2s:");
+	for (i = 0 ; i < limit ;i++) {
+		kernel->machine->ReadMem(int(virtAddr+i),1,&oneChar);
+		kernelBuf[i] = (char)oneChar;
+		//printf("%c",kernelBuf[i]);
+		if (oneChar == 0)
+			break;
+	}
+	return kernelBuf;
+}
+/*
+ * Input: - User space address (int)
+ * - Limit of buffer (int)
+ * - Buffer (char[])
+ * Output:- Number of bytes copied (int)
+ * Purpose: Copy buffer from System memory space to User memory space
+ */
+int System2User(int virtAddr,int len,char* buffer) {
+	if (len < 0) return -1;
+	if (len == 0) return len;
+	int i = 0;
+	int oneChar = 0 ;
+	do {
+		oneChar= (int) buffer[i];
+		kernel->machine->WriteMem(virtAddr+i,1,oneChar);
+		i ++;
+	} while (i < len && oneChar != 0);
+	return i;
+}
+
 void
 ExceptionHandler(ExceptionType which)
 {
@@ -58,15 +109,16 @@ ExceptionHandler(ExceptionType which)
     switch (which) {
 		case SyscallException:
 			switch(type) {
-				case SC_Halt:
+				case SC_Halt: {
 					DEBUG(dbgSys, "Shutdown, initiated by user program.\n");
 
 					SysHalt();
 
 					ASSERTNOTREACHED();
 					break;
-
-				case SC_Add:
+				}
+				//-----------------------------------------------
+				case SC_Add: {
 					DEBUG(dbgSys, "Add " << kernel->machine->ReadRegister(4) << " + " << kernel->machine->ReadRegister(5) << "\n");
 					
 					/* Process SysAdd Systemcall*/
@@ -78,45 +130,101 @@ ExceptionHandler(ExceptionType which)
 					/* Prepare Result */
 					kernel->machine->WriteRegister(2, (int)result);
 					
-					/* Modify return point */
-					{
-					/* set previous programm counter (debugging only)*/
-					kernel->machine->WriteRegister(PrevPCReg, kernel->machine->ReadRegister(PCReg));
-
-					/* set programm counter to next instruction (all Instructions are 4 byte wide)*/
-					kernel->machine->WriteRegister(PCReg, kernel->machine->ReadRegister(PCReg) + 4);
-					
-					/* set next programm counter for brach execution */
-					kernel->machine->WriteRegister(NextPCReg, kernel->machine->ReadRegister(PCReg)+4);
-					}
-
+					IncreasePC();
 					return;
-					
 					ASSERTNOTREACHED();
-
 					break;
-
-				case SC_RandomNum:
+				}
+				//-----------------------------------------------
+				case SC_RandomNum: {
 					DEBUG(dbgSys, "System call RandomNum invoked!");
 					int generatedRandomNum;
 					generatedRandomNum = SysRandomNum();
 					DEBUG(dbgSys, "RandomNum returning with " << generatedRandomNum << "\n");
 					kernel->machine->WriteRegister(2, (int)generatedRandomNum);
-					/* Modify return point */
-					{
-						/* set previous programm counter (debugging only)*/
-						kernel->machine->WriteRegister(PrevPCReg, kernel->machine->ReadRegister(PCReg));
-
-						/* set programm counter to next instruction (all Instructions are 4 byte wide)*/
-						kernel->machine->WriteRegister(PCReg, kernel->machine->ReadRegister(PCReg) + 4);
-						
-						/* set next programm counter for brach execution */
-						kernel->machine->WriteRegister(NextPCReg, kernel->machine->ReadRegister(PCReg)+4);
-					}
+					IncreasePC();
 					return;
 					ASSERTNOTREACHED();
 					break;
+				}
+				//-----------------------------------------------
+				case SC_ReadString: {
+					DEBUG(dbgSys, "Syscall ReadString invoked!");
 
+					// Lấy tham số từ thanh ghi 4 và 5
+					int virtAddr, length;
+					virtAddr = kernel->machine->ReadRegister(4);
+					length = kernel->machine->ReadRegister(5);
+					DEBUG(dbgSys, "SC_ReadString: Kernel space buffer address is " << virtAddr);
+					DEBUG(dbgSys, "SC_ReadString: Number of characters to read: " << length);
+
+					// Tạo kernel space buffer
+					char* buffer;
+					buffer = new char[length + 1];
+					if (buffer == NULL) {
+						DEBUG(dbgSys, "SC_ReadString: ERROR: Failed to allocate memory for kernel space buffer");
+						delete[] buffer;
+						break;
+					}
+
+					// Đọc chuỗi từ console vào trong kernel space buffer
+					SysReadString(buffer, length);
+
+					DEBUG(dbgSys, "SC_ReadString: ReadString result: " << buffer << "\n");
+					DEBUG(dbgSys, "SC_ReadString: ASCII Codes:");
+					for (int i = 0; i < length + 1; i++) {
+						DEBUG(dbgSys, (int)buffer[i]);
+					}
+
+					// Copy chuỗi từ kernel space buffer sang user space buffer
+					System2User(virtAddr, length + 1, buffer);
+
+					// Giải phóng bộ nhớ
+					delete[] buffer;
+
+					// Tăng program counter
+					IncreasePC();
+
+					return;
+					ASSERTNOTREACHED();
+					break;
+				}
+				//-----------------------------------------------
+				case SC_PrintString: {
+					DEBUG(dbgSys, "Syscall PrintString invoked!");
+
+					// Lấy tham số từ thanh ghi 4
+					int virtAddr;
+					virtAddr = kernel->machine->ReadRegister(4);
+					DEBUG(dbgSys, "SC_PrintString: Kernel space buffer address is " << virtAddr);
+
+					// Chuyển chuỗi từ user space sang kernel space
+					char* buffer;
+					buffer = NULL;
+					const int MAX_STRING = 2048;
+					buffer = User2System(virtAddr, MAX_STRING);
+
+					if (buffer == NULL) {
+						DEBUG(dbgSys, "SC_PrintString: Failed to copy User2System");
+						delete[] buffer;
+						break;
+					}
+
+					DEBUG(dbgSys, "SC_PrintString: kernel space buffer content: " << buffer);
+
+					// Write chuỗi ra console
+					SysPrintString(buffer, MAX_STRING);
+
+					// Giải phóng bộ nhớ
+					delete[] buffer;
+
+					// Tăng Program Counter
+					IncreasePC();
+
+					return;
+					ASSERTNOTREACHED();
+					break;
+				}
 				default:
 					cerr << "Unexpected system call " << type << "\n";
 					break;
