@@ -26,6 +26,7 @@
 #include "syscall.h"
 #include "ksyscall.h"
 #include "machine.h"
+#include <malloc.h>
 //----------------------------------------------------------------------
 // ExceptionHandler
 // 	Entry point into the Nachos kernel.  Called when a user program
@@ -49,6 +50,11 @@
 //	is in machine.h.
 //----------------------------------------------------------------------
 
+/*
+ * Hàm tăng giá trị thanh ghi PC.
+ * Đầu vào: không có.
+ * Đầu ra: không có.
+ */
 void IncreasePC() {
 	kernel->machine->WriteRegister(PrevPCReg, kernel->machine->ReadRegister(PCReg));
 	kernel->machine->WriteRegister(PCReg, kernel->machine->ReadRegister(PCReg) + 4);
@@ -56,35 +62,41 @@ void IncreasePC() {
 }
 
 /*
- * Input: - User space address (int)
- * - Limit of buffer (int)
- * Output:- Buffer (char*)
- * Purpose: Copy buffer from User memory space to System memory space
+ * Hàm sao chép chuỗi bytes từ user space sang kernel space.
+ * Đầu vào:
+ * - int virtAddr: Địa chỉ vùng nhớ user space.
+ * - int limit: Số bytes tối đa cần sao chép.
+ * Đầu ra:
+ * - char*: Con trỏ đến vùng nhớ đệm trên Kernel space chứa dữ liệu đã được sao chép từ user space.
  */
 char* User2System(int virtAddr,int limit) {
-	int i;// index
+	int i;
 	int oneChar = 0;
+	
 	char* kernelBuf = NULL;
-	kernelBuf = new char[limit +1];//need for terminal string
+	kernelBuf = (char*) malloc(limit + 1); // chứa thêm kí tự ngắt chuỗi
 	if (kernelBuf == NULL)
 		return kernelBuf;
+	
 	memset(kernelBuf,0,limit+1);
-	//printf("\n Filename u2s:");
+	
 	for (i = 0 ; i < limit ;i++) {
 		kernel->machine->ReadMem(int(virtAddr+i),1,&oneChar);
 		kernelBuf[i] = (char)oneChar;
-		//printf("%c",kernelBuf[i]);
+		
 		if (oneChar == 0)
 			break;
 	}
 	return kernelBuf;
 }
 /*
- * Input: - User space address (int)
- * - Limit of buffer (int)
- * - Buffer (char[])
- * Output:- Number of bytes copied (int)
- * Purpose: Copy buffer from System memory space to User memory space
+ * Hàm sao chép chuỗi bytes từ kernel space sang user space.
+ * Đầu vào:
+ * - int virtAddr: Địa chỉ vùng nhớ trên user space.
+ * - int len: Số byte tối đa cần sao chép.
+ * - char* buffer: Con trỏ đến vùng nhớ trên kernel space.
+ * Đầu ra:
+ * - int: Số byte đã được sao chép.
  */
 int System2User(int virtAddr,int len,char* buffer) {
 	if (len < 0) return -1;
@@ -160,10 +172,9 @@ ExceptionHandler(ExceptionType which)
 
 					// Tạo kernel space buffer
 					char* buffer;
-					buffer = new char[length + 1];
+					buffer = (char*) malloc(length + 1);
 					if (buffer == NULL) {
 						DEBUG(dbgSys, "SC_ReadString: ERROR: Failed to allocate memory for kernel space buffer");
-						delete[] buffer;
 						break;
 					}
 
@@ -180,7 +191,7 @@ ExceptionHandler(ExceptionType which)
 					System2User(virtAddr, length + 1, buffer);
 
 					// Giải phóng bộ nhớ
-					delete[] buffer;
+					free(buffer);
 
 					// Tăng program counter
 					IncreasePC();
@@ -206,7 +217,6 @@ ExceptionHandler(ExceptionType which)
 
 					if (buffer == NULL) {
 						DEBUG(dbgSys, "SC_PrintString: Failed to copy User2System");
-						delete[] buffer;
 						break;
 					}
 
@@ -216,7 +226,7 @@ ExceptionHandler(ExceptionType which)
 					SysPrintString(buffer, MAX_STRING);
 
 					// Giải phóng bộ nhớ
-					delete[] buffer;
+					free(buffer);
 
 					// Tăng Program Counter
 					IncreasePC();
