@@ -39,6 +39,10 @@
 #define SC_RandomNum 43
 #define SC_ReadString 44
 #define SC_PrintString 45
+#define SC_ReadNum 46
+#define SC_PrintNum 47
+#define SC_ReadChar 48
+#define SC_PrintChar 49
 
 #ifndef IN_ASM
 
@@ -61,6 +65,22 @@ void Halt();
  */ 
 
 int Add(int op1, int op2);
+
+// read a number from keyboard
+
+int ReadNum();
+
+// print a number into console
+
+void PrintNum();
+
+// read a character from keyboard
+
+char ReadChar();
+
+// print a character into console
+
+void PrintChar();
 
 /* Address space control operations: Exit, Exec, Execv, and Join */
 
