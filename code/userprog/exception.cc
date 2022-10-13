@@ -258,14 +258,7 @@ void ExceptionHandler(ExceptionType which)
 
 			int result = SysReadNum();
 
-			if (result == 0)
-			{
-				DEBUG(dbgSys, "ReadNum: gia tri tra ve: " << result << " --> So vua nhap khong phai so nguyen \n");
-			}
-			else
-			{
-				DEBUG(dbgSys, "ReadNum: gia tri tra ve: " << result << " --> So vua nhap la so nguyen \n");
-			}
+			DEBUG(dbgSys, "ReadNum: gia tri tra ve: " << result << "\n");
 
 			kernel->machine->WriteRegister(2, (int)result);
 
