@@ -146,11 +146,6 @@ int SysReadNum()
 
 void SysPrintNum(int num)
 {
-  for (int i = 0; i < 9; i++)
-  {
-    kernel->synchConsoleOut->PutChar("number : "[i]);
-  }
-
   if (num == 0)
     return kernel->synchConsoleOut->PutChar('0');
 
@@ -175,22 +170,16 @@ void SysPrintNum(int num)
   }
   for (int i = n - 1; i >= 0; --i)
     kernel->synchConsoleOut->PutChar(_numberBuffer[i] + '0');
-
-  kernel->synchConsoleOut->PutChar('\n');
 }
 
-char SysReadChar() { return kernel->synchConsoleIn->GetChar(); }
+char SysReadChar()
+{
+  return kernel->synchConsoleIn->GetChar();
+}
 
 void SysPrintChar(char character)
 {
-
-  for (int i = 0; i < 13; i++)
-  {
-    kernel->synchConsoleOut->PutChar("character : "[i]);
-  }
-
   kernel->synchConsoleOut->PutChar(character);
-  kernel->synchConsoleOut->PutChar('\n');
 }
 
 #endif /* ! __USERPROG_KSYSCALL_H__ */

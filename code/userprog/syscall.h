@@ -72,7 +72,7 @@ int ReadNum();
 
 // print a number into console
 
-void PrintNum();
+void PrintNum(int num);
 
 // read a character from keyboard
 
@@ -80,7 +80,7 @@ char ReadChar();
 
 // print a character into console
 
-void PrintChar();
+void PrintChar(char character);
 
 /* Address space control operations: Exit, Exec, Execv, and Join */
 

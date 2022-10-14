@@ -2,7 +2,8 @@
 
 int main()
 {
-    PrintChar(ReadChar());
-
+    PrintChar('a');
+    PrintChar('\n');
+    
     Halt();
 }
