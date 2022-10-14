@@ -14,8 +14,15 @@
 #define __STDC_LIMIT_MACROS
 #include "kernel.h"
 #include "synchconsole.h"
-#include "ksyscallhelper.h"
 #include <stdint.h>
+
+#define LF ((char)10)
+#define CR ((char)13)
+#define TAB ((char)9)
+#define SPACE ((char)' ')
+
+#define _maxNumLen 11
+char _numberBuffer[_maxNumLen + 2];
 
 void SysHalt()
 {
@@ -51,75 +58,88 @@ void SysPrintString(char* buffer, int limit) {
   }
 }
 
+bool isStop(char c) { return c == LF || c == CR || c == TAB || c == SPACE; }
+
+bool checkINT32(int integer, const char *s)
+{
+  if (integer == 0)
+    return strcmp(s, "0") == 0;
+
+  int len = strlen(s);
+
+  if (integer < 0 && s[0] != '-')
+    return false;
+
+  if (integer < 0)
+    s++, --len, integer = -integer;
+
+  while (integer > 0)
+  {
+    int digit = integer % 10;
+
+    if (s[len - 1] - '0' != digit)
+      return false;
+
+    --len;
+    integer /= 10;
+  }
+
+  return len == 0;
+}
+
 int SysReadNum()
 {
-  readUntilBlank();
+  memset(_numberBuffer, 0, sizeof(_numberBuffer));
+  int n = 0;
+  char c;
 
-  int len = strlen(_numberBuffer);
-  // Read nothing -> return 0
-  if (len == 0)
-    return 0;
+  while (n < _maxNumLen)
+  {
+    c = kernel->synchConsoleIn->GetChar();
+    if (c != '\n')
+      _numberBuffer[n++] = c;
+    else
+      break;
+  }
 
-  // Check comment below to understand this line of code
+  // because when we convert numb -> -num to compare string in function checkINT32
+  // it has stackoverflow error
   if (strcmp(_numberBuffer, "-2147483648") == 0)
     return INT32_MIN;
 
-  bool nega = (_numberBuffer[0] == '-');
-  int zeros = 0;
-  bool is_leading = true;
-  int num = 0;
-  for (int i = nega; i < len; ++i)
-  {
-    char c = _numberBuffer[i];
-    if (c == '0' && is_leading)
-      ++zeros;
-    else
-      is_leading = false;
-    if (c < '0' || c > '9')
-    {
-      DEBUG(dbgSys, "Expected number but " << _numberBuffer << " found");
-      return 0;
-    }
-    num = num * 10 + (c - '0');
-  }
+  int len = strlen(_numberBuffer);
 
-  // 00            01 or -0
-  if (zeros > 1 || (zeros && (num || nega)))
+  if (len > _maxNumLen)
   {
-    DEBUG(dbgSys, "Expected number but " << _numberBuffer << " found");
+    DEBUG(dbgSys, "Have an error: over the range");
     return 0;
   }
 
+  int num = 0;
+  bool nega = (_numberBuffer[0] == '-');
+  int index = nega;
+
+  // get the int value of characters
+  while (index < len)
+  {
+    char temp = _numberBuffer[index++];
+    if (temp < '0' || temp > '9')
+    {
+      DEBUG(dbgSys, "Have an error: have a character diff number");
+      return 0;
+    }
+
+    num = num * 10 + int(temp - '0');
+  }
+
   if (nega)
-    /**
-     * This is why we need to handle -2147483648 individually:
-     * 2147483648 is larger than the range of int32
-     */
     num = -num;
 
-  // It's safe to return directly if the number is small
-  if (len <= MAX_NUM_LENGTH - 2)
-    return num;
-
-  /**
-   * We need to make sure that number is equal to the number in the buffer.
-   *
-   * Ask: Why do we need that?
-   * Answer: Because it's impossible to tell whether the number is bigger
-   * than INT32_MAX or smaller than INT32_MIN if it has the same length.
-   *
-   * For example: 3 000 000 000.
-   *
-   * In that case, that number will cause an overflow. However, C++
-   * doens't raise interger overflow, so we need to make sure that the input
-   * string and the output number is equal.
-   *
-   */
-  if (compareNumAndString(num, _numberBuffer))
+  // check if stackoverflow occurs
+  if (checkINT32(num, _numberBuffer))
     return num;
   else
-    DEBUG(dbgSys,
-          "Expected int32 number but " << _numberBuffer << " found");
+    DEBUG(dbgSys, "Have an error: stackoverflow");
 
   return 0;
 }
