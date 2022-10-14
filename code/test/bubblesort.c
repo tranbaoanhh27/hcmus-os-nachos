@@ -48,8 +48,12 @@ int main() {
     // Get array elements' values
     PrintString("Enter elements' values:\n");
     
-    for (i = 0; i < n; i++)
+    for (i = 0; i < n; i++) {
+        PrintString("Enter value of array[");
+        PrintNum(i);
+        PrintString("]: ");
         a[i] = ReadNum();
+    }
     
     // Get user choosen sort order
     PrintString("Ascending or Descending (Enter 1 for ascending, 2 for descending): ");
