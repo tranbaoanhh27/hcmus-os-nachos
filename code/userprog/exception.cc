@@ -233,6 +233,7 @@ void ExceptionHandler(ExceptionType which)
 			if (buffer == NULL)
 			{
 				DEBUG(dbgSys, "SC_PrintString: Failed to copy User2System");
+				IncreasePC();
 				break;
 			}
 
