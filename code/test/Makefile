@@ -112,7 +112,7 @@ ifeq ($(hosttype),unknown)
 PROGRAMS = unknownhost
 else
 # change this if you create a new test program!
-PROGRAMS = add halt shell matmult sort segments randomnum readstring help readNum printNum readChar printChar #ascii bubblesort
+PROGRAMS = add halt shell matmult sort segments randomnum readstring help readNum printNum readChar printChar ascii bubblesort
 endif
 
 all: $(PROGRAMS)
@@ -178,19 +178,19 @@ printChar: printChar.o start.o
 	$(LD) $(LDFLAGS) start.o printChar.o -o printChar.coff
 	$(COFF2NOFF) printChar.coff printChar
 
-# ascii.o: ascii.c
-# 	$(CC) $(CFLAGS) -c ascii.c
+ascii.o: ascii.c
+	$(CC) $(CFLAGS) -c ascii.c
 
-# ascii: ascii.o start.o
-# 	$(LD) $(LDFLAGS) start.o ascii.o -o ascii.coff
-# 	$(COFF2NOFF) ascii.coff ascii
+ascii: ascii.o start.o
+	$(LD) $(LDFLAGS) start.o ascii.o -o ascii.coff
+	$(COFF2NOFF) ascii.coff ascii
 
-# bubblesort.o: bubblesort.c
-# 	$(CC) $(CFLAGS) -c bubblesort.c
+bubblesort.o: bubblesort.c
+	$(CC) $(CFLAGS) -c bubblesort.c
 
-# bubblesort: bubblesort.o start.o
-# 	$(LD) $(LDFLAGS) start.o bubblesort.o -o bubblesort.coff
-# 	$(COFF2NOFF) bubblesort.coff bubblesort
+bubblesort: bubblesort.o start.o
+	$(LD) $(LDFLAGS) start.o bubblesort.o -o bubblesort.coff
+	$(COFF2NOFF) bubblesort.coff bubblesort
 
 shell.o: shell.c
 	$(CC) $(CFLAGS) -c shell.c

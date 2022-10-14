@@ -1,5 +1,4 @@
 #include "syscall.h"
-#include <malloc.h>
 
 int GoodOrder(int curr, int next, int asc) {
     if (asc == 1)
@@ -33,8 +32,8 @@ void BubbleSort(int* a, int n, int asc) {
 int main() {
     
     unsigned int n;
-    int *a;
-    int isAscending;
+    int a[100];
+    int isAscending, i;
     
     // Get size of array
     do {
@@ -42,14 +41,13 @@ int main() {
         n = ReadNum();
 
         if (n < 1 || n > 100)
-            PrintString("Invalid size! Please enter n as an integer in range [1, 100]");
+            PrintString("Invalid size! Please enter n as an integer in range [1, 100]\n");
 
     } while (n < 1 || n > 100);
 
     // Get array elements' values
-    PrintString("Enter elements' values: ");
-    a = (int*) malloc(n);
-    int i;
+    PrintString("Enter elements' values:\n");
+    
     for (i = 0; i < n; i++)
         a[i] = ReadNum();
     
@@ -58,7 +56,7 @@ int main() {
     do {
         isAscending = ReadNum();
         if (!(isAscending == 1 || isAscending == 2))
-            PrintString("Invalid choosen! Please enter 1 for ascending, 2 for descending)");
+            PrintString("Invalid choosen! Please enter 1 for ascending, 2 for descending)\n");
     } while (isAscending != 1 && isAscending != 2);
 
     BubbleSort(a, n, isAscending);
@@ -68,8 +66,6 @@ int main() {
         PrintNum(a[i]); PrintChar('\t');
     }
     PrintChar('\n');
-
-    free(a);
 
     Halt();
 }
