@@ -139,6 +139,7 @@ int SysReadNum()
     num = -num;
 
   // check if stackoverflow occurs
+  // or wrong input like "-012"
   if (checkNumString(num, _numberBuffer))
     return num;
   else
@@ -150,7 +151,7 @@ int SysReadNum()
 void SysPrintNum(int num)
 {
   // check if num == 0
-  // we check num == 0 for loop condition
+  // because we need num == 0 for loop condition
   if (num == 0)
     return kernel->synchConsoleOut->PutChar('0');
 
