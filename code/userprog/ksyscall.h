@@ -2,24 +2,19 @@
  *
  * userprog/ksyscall.h
  *
- * Kernel interface for systemcalls 
+ * Kernel interface for systemcalls
  *
  * by Marcus Voelp  (c) Universitaet Karlsruhe
  *
  **************************************************************/
 
-#ifndef __USERPROG_KSYSCALL_H__ 
-#define __USERPROG_KSYSCALL_H__ 
+#ifndef __USERPROG_KSYSCALL_H__
+#define __USERPROG_KSYSCALL_H__
 
 #define __STDC_LIMIT_MACROS
 #include "kernel.h"
 #include "synchconsole.h"
 #include <stdint.h>
-
-#define LF ((char)10)
-#define CR ((char)13)
-#define TAB ((char)9)
-#define SPACE ((char)' ')
 
 #define _maxNumLen 11
 char _numberBuffer[_maxNumLen + 2];
@@ -34,33 +29,37 @@ int SysAdd(int op1, int op2)
   return op1 + op2;
 }
 
-int SysRandomNum() {
+int SysRandomNum()
+{
   srand(time(NULL));
   return rand();
 }
 
-void SysReadString(char* buffer, int length) {
-  for (int i = 0; i < length; i++) {
+void SysReadString(char *buffer, int length)
+{
+  for (int i = 0; i < length; i++)
+  {
     char ch;
-    ch = (char) kernel->synchConsoleIn->GetChar();
+    ch = (char)kernel->synchConsoleIn->GetChar();
     buffer[i] = ch;
   }
   buffer[length] = '\0';
 }
 
-void SysPrintString(char* buffer, int limit) {
-  if (buffer != NULL) {
+void SysPrintString(char *buffer, int limit)
+{
+  if (buffer != NULL)
+  {
     int i = 0;
-    while (i < limit && (char)buffer[i] != '\0') {
+    while (i < limit && (char)buffer[i] != '\0')
+    {
       kernel->synchConsoleOut->PutChar((char)buffer[i]);
       i++;
     }
   }
 }
 
-bool isStop(char c) { return c == LF || c == CR || c == TAB || c == SPACE; }
-
-bool checkINT32(int integer, const char *s)
+bool checkNumString(int integer, const char *s)
 {
   if (integer == 0)
     return strcmp(s, "0") == 0;
@@ -93,25 +92,29 @@ int SysReadNum()
   int n = 0;
   char c;
 
-  while (n < _maxNumLen)
+  // read the input from the keyboard
+  while (1)
   {
     c = kernel->synchConsoleIn->GetChar();
+    // if user get enter -> stop
     if (c != '\n')
       _numberBuffer[n++] = c;
     else
       break;
   }
 
-  // because when we convert numb -> -num to compare string in function checkINT32
-  // it has stackoverflow error
+  // because when we convert numb -> -num to compare string in function checkNumString
+  // if it has wrong value
   if (strcmp(_numberBuffer, "-2147483648") == 0)
     return INT32_MIN;
 
+  // get the len of input 
   int len = strlen(_numberBuffer);
 
-  if (len > _maxNumLen)
+  // if over the range
+  if (len >= _maxNumLen)
   {
-    DEBUG(dbgSys, "Have an error: over the range");
+    DEBUG(dbgSys, "Have an error");
     return 0;
   }
 
@@ -125,7 +128,7 @@ int SysReadNum()
     char temp = _numberBuffer[index++];
     if (temp < '0' || temp > '9')
     {
-      DEBUG(dbgSys, "Have an error: have a character diff number");
+      DEBUG(dbgSys, "Have an error");
       return 0;
     }
 
@@ -136,19 +139,23 @@ int SysReadNum()
     num = -num;
 
   // check if stackoverflow occurs
-  if (checkINT32(num, _numberBuffer))
+  if (checkNumString(num, _numberBuffer))
     return num;
   else
-    DEBUG(dbgSys, "Have an error: stackoverflow");
+    DEBUG(dbgSys, "Have an error");
 
   return 0;
 }
 
 void SysPrintNum(int num)
 {
+  // check if num == 0
+  // we check num == 0 for loop condition
   if (num == 0)
     return kernel->synchConsoleOut->PutChar('0');
 
+  // the -num value is over the INT32 so cannot num = -num
+  // and use loop to print
   if (num == INT32_MIN)
   {
     kernel->synchConsoleOut->PutChar('-');
