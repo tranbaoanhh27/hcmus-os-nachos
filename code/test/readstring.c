@@ -2,7 +2,9 @@
 
 int main() {
     char buffer[11];
-    ReadString(buffer, 8);
+    PrintString("Enter string of length 10: ");
+    ReadString(buffer, 10);
     PrintString(buffer);
+    PrintChar('\n');
     Halt();
 }
