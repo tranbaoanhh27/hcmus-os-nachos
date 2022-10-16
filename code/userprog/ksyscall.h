@@ -32,7 +32,7 @@ int SysAdd(int op1, int op2)
 int SysRandomNum()
 {
   srand(time(NULL));
-  return rand();
+  return rand() + 1;
 }
 
 void SysReadString(char *buffer, int length)
