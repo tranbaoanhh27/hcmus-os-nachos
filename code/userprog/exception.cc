@@ -146,7 +146,7 @@ void solve_SC_ReadString() {
 	int virtAddr, length;
 	virtAddr = GET_ARGUMENT(1);
 	length = GET_ARGUMENT(2);
-	DEBUG(dbgSys, "SC_ReadString: Kernel space buffer address is " << virtAddr);
+	DEBUG(dbgSys, "SC_ReadString: User space buffer address is " << virtAddr);
 	DEBUG(dbgSys, "SC_ReadString: Number of characters to read: " << length);
 
 	// Tạo kernel space buffer
@@ -180,7 +180,7 @@ void solve_SC_PrintString() {
 
 	// Lấy tham số từ thanh ghi 4
 	int virtAddr = GET_ARGUMENT(1);
-	DEBUG(dbgSys, "SC_PrintString: Kernel space buffer address is " << virtAddr);
+	DEBUG(dbgSys, "SC_PrintString: User space buffer address is " << virtAddr);
 
 	// Chuyển chuỗi từ user space sang kernel space
 	char *buffer;
