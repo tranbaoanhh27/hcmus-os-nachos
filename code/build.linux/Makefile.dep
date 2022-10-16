@@ -44,25 +44,32 @@ bitmap.o: ../lib/bitmap.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -99,6 +106,30 @@ bitmap.o: ../lib/bitmap.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -111,22 +142,7 @@ bitmap.o: ../lib/bitmap.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../lib/bitmap.h
 debug.o: ../lib/debug.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  ../lib/utility.h ../lib/debug.h ../lib/sysdep.h \
@@ -159,25 +175,32 @@ debug.o: ../lib/debug.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -214,6 +237,30 @@ debug.o: ../lib/debug.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -226,22 +273,7 @@ debug.o: ../lib/debug.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h
 hash.o: ../lib/hash.cc /usr/include/stdc-predef.h ../lib/copyright.h
 libtest.o: ../lib/libtest.cc /usr/include/stdc-predef.h \
@@ -276,25 +308,32 @@ libtest.o: ../lib/libtest.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -331,6 +370,30 @@ libtest.o: ../lib/libtest.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -343,22 +406,7 @@ libtest.o: ../lib/libtest.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../lib/list.cc ../lib/hash.h ../lib/hash.cc
 list.o: ../lib/list.cc /usr/include/stdc-predef.h ../lib/copyright.h
 sysdep.o: ../lib/sysdep.cc /usr/include/stdc-predef.h ../lib/copyright.h \
@@ -392,25 +440,32 @@ sysdep.o: ../lib/sysdep.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -447,6 +502,30 @@ sysdep.o: ../lib/sysdep.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -459,22 +538,7 @@ sysdep.o: ../lib/sysdep.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h /usr/include/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -496,11 +560,8 @@ sysdep.o: ../lib/sysdep.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/x86_64-linux-gnu/sys/un.h /usr/include/c++/4.8/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/signal.h /usr/include/x86_64-linux-gnu/bits/signum.h \
+ /usr/include/x86_64-linux-gnu/sys/un.h /usr/include/signal.h \
+ /usr/include/x86_64-linux-gnu/bits/signum.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
@@ -550,25 +611,32 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -605,6 +673,30 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -617,22 +709,7 @@ interrupt.o: ../machine/interrupt.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../lib/list.cc ../machine/callback.h \
  ../threads/main.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
@@ -669,25 +746,32 @@ stats.o: ../machine/stats.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -724,6 +808,30 @@ stats.o: ../machine/stats.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -736,22 +844,7 @@ stats.o: ../machine/stats.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../machine/stats.h
 timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  ../lib/copyright.h ../machine/timer.h ../lib/utility.h \
@@ -785,25 +878,32 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -840,6 +940,30 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -852,22 +976,7 @@ timer.o: ../machine/timer.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -905,25 +1014,32 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -960,6 +1076,30 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -972,22 +1112,7 @@ console.o: ../machine/console.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -1025,25 +1150,32 @@ machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1080,6 +1212,30 @@ machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1092,22 +1248,7 @@ machine.o: ../machine/machine.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
  ../threads/scheduler.h ../lib/list.h ../lib/list.cc \
@@ -1144,25 +1285,32 @@ mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1199,6 +1347,30 @@ mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1211,22 +1383,7 @@ mipssim.o: ../machine/mipssim.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../machine/machine.h ../machine/translate.h \
  ../machine/mipssim.h ../threads/main.h ../threads/kernel.h \
  ../threads/thread.h ../userprog/addrspace.h ../filesys/filesys.h \
@@ -1264,25 +1421,32 @@ translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1319,6 +1483,30 @@ translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1331,22 +1519,7 @@ translate.o: ../machine/translate.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -1385,25 +1558,32 @@ network.o: ../machine/network.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1440,6 +1620,30 @@ network.o: ../machine/network.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1452,22 +1656,7 @@ network.o: ../machine/network.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -1504,25 +1693,32 @@ disk.o: ../machine/disk.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1559,6 +1755,30 @@ disk.o: ../machine/disk.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1571,22 +1791,7 @@ disk.o: ../machine/disk.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/main.h ../threads/kernel.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
@@ -1625,25 +1830,32 @@ alarm.o: ../threads/alarm.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1680,6 +1892,30 @@ alarm.o: ../threads/alarm.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1692,22 +1928,7 @@ alarm.o: ../threads/alarm.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -1743,25 +1964,32 @@ kernel.o: ../threads/kernel.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1798,6 +2026,30 @@ kernel.o: ../threads/kernel.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1810,22 +2062,7 @@ kernel.o: ../threads/kernel.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/main.h ../threads/kernel.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
@@ -1866,25 +2103,32 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -1921,6 +2165,30 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -1933,22 +2201,7 @@ main.o: ../threads/main.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -1986,25 +2239,32 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2041,6 +2301,30 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2053,22 +2337,7 @@ scheduler.o: ../threads/scheduler.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/scheduler.h ../lib/list.h \
  ../lib/list.cc ../threads/thread.h ../machine/machine.h \
  ../machine/translate.h ../userprog/addrspace.h ../filesys/filesys.h \
@@ -2106,25 +2375,32 @@ synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2161,6 +2437,30 @@ synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2173,22 +2473,7 @@ synch.o: ../threads/synch.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
  ../lib/list.h ../lib/debug.h ../lib/list.cc ../threads/main.h \
@@ -2226,25 +2511,32 @@ synchlist.o: ../threads/synchlist.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2281,6 +2573,30 @@ synchlist.o: ../threads/synchlist.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2293,22 +2609,7 @@ synchlist.o: ../threads/synchlist.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../lib/list.cc ../threads/synch.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
@@ -2346,25 +2647,32 @@ thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2401,6 +2709,30 @@ thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2413,22 +2745,7 @@ thread.o: ../threads/thread.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
  ../threads/switch.h ../threads/synch.h ../lib/list.h ../lib/debug.h \
@@ -2466,25 +2783,32 @@ addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2521,6 +2845,30 @@ addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2533,22 +2881,7 @@ addrspace.o: ../userprog/addrspace.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -2586,25 +2919,32 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2641,6 +2981,30 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2653,22 +3017,7 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../threads/kernel.h ../threads/thread.h \
  ../machine/machine.h ../machine/translate.h ../userprog/addrspace.h \
  ../filesys/filesys.h ../filesys/openfile.h ../threads/scheduler.h \
@@ -2676,9 +3025,7 @@ exception.o: ../userprog/exception.cc /usr/include/stdc-predef.h \
  ../machine/callback.h ../machine/stats.h ../threads/alarm.h \
  ../machine/timer.h ../userprog/syscall.h ../userprog/errno.h \
  ../userprog/ksyscall.h ../userprog/synchconsole.h ../machine/console.h \
- ../threads/synch.h /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h \
- /usr/include/stdint.h /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/malloc.h
+ ../threads/synch.h
 synchconsole.o: ../userprog/synchconsole.cc /usr/include/stdc-predef.h \
  ../lib/copyright.h ../userprog/synchconsole.h ../lib/utility.h \
  ../machine/callback.h ../machine/console.h ../threads/synch.h \
@@ -2711,25 +3058,32 @@ synchconsole.o: ../userprog/synchconsole.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2766,6 +3120,30 @@ synchconsole.o: ../userprog/synchconsole.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2778,22 +3156,7 @@ synchconsole.o: ../userprog/synchconsole.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
  ../lib/list.h ../lib/debug.h ../lib/list.cc ../threads/main.h \
@@ -2832,25 +3195,32 @@ directory.o: ../filesys/directory.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -2887,6 +3257,30 @@ directory.o: ../filesys/directory.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -2899,22 +3293,7 @@ directory.o: ../filesys/directory.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../filesys/directory.h
 filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  ../lib/copyright.h ../filesys/filehdr.h ../machine/disk.h \
@@ -2949,25 +3328,32 @@ filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -3004,6 +3390,30 @@ filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -3016,22 +3426,7 @@ filehdr.o: ../filesys/filehdr.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../lib/debug.h ../filesys/synchdisk.h \
  ../threads/synch.h ../threads/thread.h ../machine/machine.h \
  ../machine/translate.h ../userprog/addrspace.h ../filesys/filesys.h \
@@ -3070,25 +3465,32 @@ pbitmap.o: ../filesys/pbitmap.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -3125,6 +3527,30 @@ pbitmap.o: ../filesys/pbitmap.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -3137,22 +3563,7 @@ pbitmap.o: ../filesys/pbitmap.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h
 openfile.o: ../filesys/openfile.cc /usr/include/stdc-predef.h
 synchdisk.o: ../filesys/synchdisk.cc /usr/include/stdc-predef.h \
@@ -3187,25 +3598,32 @@ synchdisk.o: ../filesys/synchdisk.cc /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -3242,6 +3660,30 @@ synchdisk.o: ../filesys/synchdisk.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -3254,22 +3696,7 @@ synchdisk.o: ../filesys/synchdisk.cc /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \
  ../lib/list.h ../lib/debug.h ../lib/list.cc ../threads/main.h \
@@ -3307,25 +3734,32 @@ post.o: ../network/post.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/c++/4.8/exception \
  /usr/include/c++/4.8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/4.8/bits/exception_ptr.h \
+ /usr/include/c++/4.8/bits/exception_defines.h \
+ /usr/include/c++/4.8/bits/nested_exception.h \
  /usr/include/c++/4.8/bits/char_traits.h \
  /usr/include/c++/4.8/bits/stl_algobase.h \
  /usr/include/c++/4.8/bits/functexcept.h \
- /usr/include/c++/4.8/bits/exception_defines.h \
  /usr/include/c++/4.8/bits/cpp_type_traits.h \
  /usr/include/c++/4.8/ext/type_traits.h \
  /usr/include/c++/4.8/ext/numeric_traits.h \
  /usr/include/c++/4.8/bits/stl_pair.h /usr/include/c++/4.8/bits/move.h \
  /usr/include/c++/4.8/bits/concept_check.h \
+ /usr/include/c++/4.8/type_traits \
  /usr/include/c++/4.8/bits/stl_iterator_base_types.h \
  /usr/include/c++/4.8/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/4.8/debug/debug.h \
- /usr/include/c++/4.8/bits/stl_iterator.h \
+ /usr/include/c++/4.8/bits/stl_iterator.h /usr/include/c++/4.8/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/4.8/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/4.8/bits/c++locale.h \
  /usr/include/c++/4.8/clocale /usr/include/locale.h \
  /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/4.8/cctype \
- /usr/include/ctype.h /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/ctype.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h \
@@ -3362,6 +3796,30 @@ post.o: ../network/post.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/backward/binders.h \
  /usr/include/c++/4.8/bits/range_access.h \
  /usr/include/c++/4.8/bits/basic_string.h \
+ /usr/include/c++/4.8/initializer_list \
+ /usr/include/c++/4.8/ext/string_conversions.h \
+ /usr/include/c++/4.8/cstdlib /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/c++/4.8/cstdio /usr/include/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/libio.h \
+ /usr/include/x86_64-linux-gnu/bits/_G_config.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/c++/4.8/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/c++/4.8/bits/functional_hash.h \
+ /usr/include/c++/4.8/bits/hash_bytes.h \
  /usr/include/c++/4.8/bits/basic_string.tcc \
  /usr/include/c++/4.8/bits/locale_classes.tcc \
  /usr/include/c++/4.8/streambuf /usr/include/c++/4.8/bits/streambuf.tcc \
@@ -3374,22 +3832,7 @@ post.o: ../network/post.cc /usr/include/stdc-predef.h ../lib/copyright.h \
  /usr/include/c++/4.8/bits/locale_facets.tcc \
  /usr/include/c++/4.8/bits/basic_ios.tcc \
  /usr/include/c++/4.8/bits/ostream.tcc /usr/include/c++/4.8/istream \
- /usr/include/c++/4.8/bits/istream.tcc /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/sys/select.h \
- /usr/include/x86_64-linux-gnu/bits/select.h \
- /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
- /usr/include/x86_64-linux-gnu/bits/sysmacros.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/libio.h \
- /usr/include/x86_64-linux-gnu/bits/_G_config.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h /usr/include/string.h \
+ /usr/include/c++/4.8/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h ../lib/list.cc ../threads/synch.h \
  ../threads/thread.h ../machine/machine.h ../machine/translate.h \
  ../userprog/addrspace.h ../filesys/filesys.h ../filesys/openfile.h \

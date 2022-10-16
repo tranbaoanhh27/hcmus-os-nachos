@@ -295,42 +295,52 @@ void ExceptionHandler(ExceptionType which) {
 			switch(type) {
 				case SC_Halt:
 					solve_SC_Halt();
+					return;
 					break;
 
 				case SC_ThreadJoin:
 					solve_SC_ThreadJoin(type);
+					return;
 					break;
 
 				case SC_Add:
 					solve_SC_Add();
+					return;
 					break;
 
 				case SC_RandomNum:
 					solve_SC_RandomNum();
+					return;
 					break;
 
 				case SC_ReadString:
 					solve_SC_ReadString();
+					return;
 					break;
 
 				case SC_PrintString:
 					solve_SC_PrintString();
+					return;
 					break;
 
 				case SC_ReadNum:
 					solve_SC_ReadNum();
+					return;
 					break;
 
 				case SC_PrintNum:
 					solve_SC_PrintNum();
+					return;
 					break;
 
 				case SC_ReadChar:
 					solve_SC_ReadChar();
+					return;
 					break;
 
 				case SC_PrintChar:
 					solve_SC_PrintChar();
+					return;
 					break;
 
 				default:
