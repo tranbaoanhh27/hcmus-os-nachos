@@ -200,7 +200,7 @@ void solve_SC_PrintString() {
 	SysPrintString(buffer, MAX_STRING);
 
 	// Giải phóng bộ nhớ
-	free(buffer);
+	delete[] buffer;
 
 	// Tăng Program Counter
 	increasePC();
