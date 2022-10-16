@@ -222,7 +222,7 @@ void ExceptionHandler(ExceptionType which)
 			// Lấy tham số từ thanh ghi 4
 			int virtAddr;
 			virtAddr = kernel->machine->ReadRegister(4);
-			DEBUG(dbgSys, "SC_PrintString: Kernel space buffer address is " << virtAddr);
+			DEBUG(dbgSys, "SC_PrintString: User space buffer address is " << virtAddr);
 
 			// Chuyển chuỗi từ user space sang kernel space
 			char *buffer;
