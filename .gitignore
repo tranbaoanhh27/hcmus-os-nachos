@@ -1,4 +1,4 @@
-./c++example
-./coff2noff
-./code/build.linux
-./COPYRIGHT
+c++example/
+coff2noff/
+code/build.linux
+COPYRIGHT
