@@ -1,8 +1,6 @@
 ./build.cygwin
 ./build.linux
 ./build.macosx
-./filesys
-./lib
 ./machine
 ./network
 ./threads
