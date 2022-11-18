@@ -41,8 +41,8 @@
 #define MAX_PROCESS 10
 
 #ifdef FILESYS_STUB // Temporarily implement file system calls as
-					// calls to UNIX, until the real file system
-					// implementation is available
+// 					// calls to UNIX, until the real file system
+// 					// implementation is available
 class FileSystem
 {
 public:
@@ -52,7 +52,7 @@ public:
 	{
 		for (int i = 0; i < MAX_PROCESS; i++)
 		{
-			fileTable = new FileTable;
+			fileTable = new FileTable*();
 		}
 	}
 
@@ -93,7 +93,7 @@ public:
 
 		if (fileDescriptor == -1)
 			return NULL;
-		indexFile = OpenFile return new OpenFile(fileDescriptor);
+		return new OpenFile(fileDescriptor);
 	}
 
 	int openFile(char *name, int openMode)
@@ -106,7 +106,7 @@ public:
 		return kernel->currentThread->processID;
 	}
 
-	int Write(char *buffer, int charCount, OpenFileID fileID)
+	int Write(char *buffer, int charCount, OpenFileId fileID)
 	{
 		return fileTable[currentProcess()]->Write(buffer, charCount, fileID);
 	}
