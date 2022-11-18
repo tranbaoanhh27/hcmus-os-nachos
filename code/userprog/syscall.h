@@ -44,11 +44,6 @@
 #define SC_ReadChar 48
 #define SC_PrintChar 49
 
-#define SC_Write 54
-#define SC_Seek 55
-#define SC_Remove 56
-#define SC_COPYSPACE_KERNEL_USER 57
-
 #ifndef IN_ASM
 
 /* The system call interface.  These are the operations the Nachos
@@ -173,14 +168,6 @@ int Seek(int position, OpenFileId id);
  */
 int Close(OpenFileId id);
 
-int Remove(char* name) {
-
-}
-
-void CopySpace_Kernel_User() {
-
-}
-
 
 /* User-level thread operations: Fork and Yield.  To allow multiple
  * threads to run within a user program. 
@@ -228,3 +215,4 @@ void PrintString(char* buffer);
 #endif /* IN_ASM */
 
 #endif /* SYSCALL_H */
+

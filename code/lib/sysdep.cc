@@ -297,28 +297,12 @@ PollFile(int fd)
 }
 
 //----------------------------------------------------------------------
-// OpenForRead
-// 	Open a file for reading.  Return -1 if it doesn't exist
-//	if it does already exist.  Return the file descriptor.
-//
-//	"name" -- file name
-//----------------------------------------------------------------------
-
-int
-OpenForRead(char* name, bool CrashOnError) {
-    int fd = open(name, 0_RDONLY, 0);
-    ASSERT(!CrashOnError || fd >= 0);
-    return fd;
-}
-
-//----------------------------------------------------------------------
 // OpenForWrite
 // 	Open a file for writing.  Create it if it doesn't exist; truncate it 
 //	if it does already exist.  Return the file descriptor.
 //
 //	"name" -- file name
 //----------------------------------------------------------------------
-
 
 int
 OpenForWrite(char *name)

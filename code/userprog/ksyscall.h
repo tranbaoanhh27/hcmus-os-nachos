@@ -14,7 +14,6 @@
 #define __STDC_LIMIT_MACROS
 #include "kernel.h"
 #include "synchconsole.h"
-#include "syscall.h"
 #include <stdint.h>
 
 #define _maxNumLen 11
@@ -190,24 +189,5 @@ void SysPrintChar(char character)
 {
   kernel->synchConsoleOut->PutChar(character);
 }
-
-int SysWrite(char* buffer, int size, OpenFileId id) {
-  if (id == 1) {
-    SysReadString(buffer, size);
-  }
-  return kernel->fileSystem->Write(buffer, size, id);
-}
-
-int SysSeek(int pos, OpenFileId id) {
-  return kernel->fileSystem->Seek(pos, id);
-}
-
-int SysRemove(char* fileName) {
-  return kernel->fileSystem->Remove(fileName);
-}
-
-// void SysCopyUserKernelUser() {
-
-// }
 
 #endif /* ! __USERPROG_KSYSCALL_H__ */
