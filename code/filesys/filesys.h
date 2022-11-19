@@ -36,6 +36,7 @@
 #include "copyright.h"
 #include "sysdep.h"
 #include "openfile.h"
+#include <stdio.h>
 
 #define MAX_PROCESS 1
 #define MAX_FILE 20
@@ -52,19 +53,29 @@ class FileSystem
 private:
     OpenFile ***FileTable;
     int **id;
-    // int **openMode;
+    int **openMode;
+    char ***name;
 
 public:
     FileSystem()
     {
-        FileTable = new  OpenFile**[MAX_PROCESS];
+        // khoi tao bang
+        FileTable = new OpenFile **[MAX_PROCESS];
         id = new int *[MAX_PROCESS];
+        openMode = new int *[MAX_PROCESS];
+        name = new char **[MAX_PROCESS];
+
         for (int i = 0; i < MAX_PROCESS; i++)
         {
-            FileTable[i] = new OpenFile*[MAX_FILE];
+            FileTable[i] = new OpenFile *[MAX_FILE];
             id[i] = new int[MAX_FILE];
-            id[i][0] = CONSOLE_IN;
-            id[i][1] = CONSOLE_OUT;
+
+            // luu y 2 phan tu dau cua mang
+            id[i][CONSOLE_IN] = CONSOLE_IN;
+            id[i][CONSOLE_OUT] = CONSOLE_OUT;
+
+            openMode[i] = new int[MAX_FILE];
+            name[i] = new char *[MAX_FILE];
         }
     }
 
@@ -72,10 +83,29 @@ public:
     {
         for (int i = 0; i < MAX_PROCESS; i++)
         {
-            if (FileTable[i] != nullptr)
+            for (int j = 2; j < MAX_FILE; j++)
             {
+                if (FileTable[i][j] != nullptr)
+                {
+                    delete FileTable[i][j];
+                    FileTable[i][j] = nullptr;
+                }
+
+                if (name[i][j] != nullptr)
+                {
+                    delete name[i][j];
+                    name[i][j] = nullptr;
+                }
+            }
+
+            if (FileTable[i] != nullptr) {
                 delete FileTable[i];
                 FileTable[i] = nullptr;
+            }
+
+            if (name[i] != nullptr) {
+                delete name[i];
+                name[i] = nullptr;
             }
 
             if (id[i] != nullptr)
@@ -89,8 +119,49 @@ public:
         FileTable = nullptr;
         delete[] id;
         id = nullptr;
+        delete[] name;
+        name = nullptr;
     }
 
+    /*
+    kiem tra trong bang co file da cho co mo theo MODE_READ
+    */
+    bool checkFileModeRead(char *fileName)
+    {
+        for (int i = 0; i < MAX_PROCESS; i++)
+        {
+            for (int j = 2; j < MAX_FILE; j++)
+            {
+                if (name[i][j] != nullptr && strcmp(fileName, name[i][j]) == 0 && openMode[i][j] == MODE_READ)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /*
+    kiem tra trong bang co file da cho co mo theo MODE_READWRITE
+    */
+    bool checkFileModeReadWrite(char *fileName)
+    {
+        for (int i = 0; i < MAX_PROCESS; i++)
+        {
+            for (int j = 2; j < MAX_FILE; j++)
+            {
+                if (name[i][j] != nullptr && strcmp(fileName, name[i][j]) == 0 && openMode[i][j] == MODE_READWRITE)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /*
+    Tao file theo voi ten cho truoc
+    */
     bool Create(char *name)
     {
         int fileDescriptor = OpenForWrite(name);
@@ -101,19 +172,34 @@ public:
         return TRUE;
     }
 
-    int OpenMode(char *name, int type = 0)
+    /*
+    mo file voi ten va OPEN_MODE cho truoc
+    */
+    int OpenMode(char *fileName, int type = 0)
     {
         int fileDescriptor;
-
-        if (type == 0)
+        
+        // mo them MODE duoc chi dinh san
+        // luu y mot MODE voi moi File duoc mo duy nhat 1 lan
+        // (readonly va readwrite) -> moi file toi da mo 2 mode
+        if (type == MODE_READ)
         {
-            fileDescriptor = OpenForRead(name, FALSE);
+            // kiem tra file da mo MODE_READ
+            if (checkFileModeRead(fileName)) {
+                return -1;
+            }
+            else fileDescriptor = OpenForRead(fileName, FALSE);
         }
-        else if (type == 1)
+        else if (type == MODE_READWRITE)
         {
-            fileDescriptor = OpenForReadWrite(name, FALSE);
+            // kiem tra file da mo MODE_READWRITE
+            if (checkFileModeReadWrite(fileName)) {
+                return -1;
+            }
+            else fileDescriptor = OpenForReadWrite(fileName, FALSE);
         }
 
+        // them file vao bang
         bool k = false;
         for (int i = 0; i < MAX_PROCESS; i++)
         {
@@ -121,29 +207,48 @@ public:
             {
                 if (FileTable[i][j] == nullptr)
                 {
+                    // tao OpenFIle, them file Descriptor
+                    // them ten file, mode
                     FileTable[i][j] = new OpenFile(fileDescriptor);
                     id[i][j] = fileDescriptor;
+                    openMode[i][j] = type;
+                    int len = strlen(fileName);
+                    name[i][j] = new char[len];
+                    int index = 0;
+                    while (index != len)
+                    {
+                        name[i][j][index++] = fileName[index];
+                    }
                     k = true;
                     break;
                 }
             }
         }
 
+        // neu con cho trong thi giu doi tuong OpenFile chua file can mo
         if (k)
         {
             return fileDescriptor;
         }
-        else
+        else // neu khong con cho trong thi dong file vua mo
         {
+            Close(fileDescriptor);
             return -1;
         }
     }
 
     int Write(char *buffer, int size, int fileID)
     {
+        // file descriptor khong am
         if (fileID < 0)
             return -1;
-        
+
+        // do dai chuoi khong dung voi du lieu cho truoc
+        if (strlen(buffer) != size) {
+            return -1;
+        }
+
+        // tim kiem vi tri chua file
         OpenFile *file = nullptr;
 
         for (int i = 0; i < MAX_PROCESS; i++)
@@ -153,26 +258,36 @@ public:
                 if (id[i][j] == fileID)
                 {
                     file = FileTable[i][j];
+                    if (openMode[i][j] != MODE_READWRITE) {
+                        return -1;
+                    }
                     break;
                 }
             }
         }
 
-        if (file != nullptr) {
+        // tim thay file
+        if (file != nullptr)
+        {
+            // goi ham thuc hien
             int result = file->Write(buffer, size);
             file = nullptr;
             return result;
         }
-        else {
+        // khong tim thay file
+        else
+        {
             return -1;
         }
     }
 
     int Read(char *buffer, int size, int fileID)
     {
+        // file descriptor khong am
         if (fileID < 0)
             return -1;
-        
+
+        // tim kiem vi tri cua file
         OpenFile *file = nullptr;
 
         for (int i = 0; i < MAX_PROCESS; i++)
@@ -186,22 +301,29 @@ public:
                 }
             }
         }
-
-        if (file != nullptr) {
+        
+        // neu tim thay
+        if (file != nullptr)
+        {
             int result = file->Read(buffer, size);
             file = nullptr;
             return result;
         }
-        else {
+        // khong tim thay
+        else
+        {
             return -1;
         }
     }
 
     int Seek(int pos, int fileID)
     {
+        // file decriptor khong am
         if (fileID < 0)
             return -1;
-        
+
+        // tim kiem vi tri
+        // va tien hanh them OpenFile moi vao bang
         OpenFile *file = nullptr;
 
         for (int i = 0; i < MAX_PROCESS; i++)
@@ -216,28 +338,42 @@ public:
             }
         }
 
-        if (file != nullptr) {
-            if (pos < -1) {
+        // neu file tim thay
+        if (file != nullptr)
+        {
+            // neu vi am va khac -1 (quy dinh -1 la cuoi file)
+            if (pos < -1)
+            {
                 return -1;
             }
-            else if (pos == -1) {
+            // neu pos = -1 -> cuoi file
+            else if (pos == -1)
+            {
                 pos = file->Length();
             }
-
+            
+            // thuc hien va tra ket qua
             int result = file->Seek(pos);
             file = nullptr;
             return result;
         }
-        else {
+        else // file khong tim thay
+        {
             return -1;
         }
     }
 
-    int Close(int fileID) {       
-        if (fileID < 0) {
+    int Close(int fileID)
+    {
+        // kiem tra file descriptor
+        if (fileID < 0)
+        {
             return -1;
-        } 
+        }
 
+
+        // tim kiem vi tri chua fileID 
+        // xoa va lam rong
         for (int i = 0; i < MAX_PROCESS; i++)
         {
             for (int j = 2; j < MAX_FILE; j++)
@@ -248,43 +384,35 @@ public:
                     delete FileTable[i][j];
                     FileTable[i][j] = nullptr;
                     id[i][j] = NULL;
+                    delete name[i][j];
+                    name[i][j] = nullptr;
+                    openMode[i][j] = NULL;
                     Close(fileID);
                     return 0;
                     break;
                 }
             }
-        } 
+        }
+
+        return -1;
     }
 
-    int Remove(char *name) { 
-
-        int fileDes1 = OpenForReadWrite(name, FALSE);
-        int fileDes2 = OpenForRead(name, FALSE);
-
-        OpenFile *file = nullptr;
-
-        for (int i = 0; i < MAX_PROCESS; i++)
-        {
-            for (int j = 2; j < MAX_FILE; j++)
-            {
-                if (id[i][j] == fileDes1 || id[i][j] == fileDes2)
-                {
-                    file = FileTable[i][j];
-                    break;
-                }
-            }
-        }
-
-        if (file == nullptr) {
+    int Remove(char *name)
+    {
+        // kiem tra neu file khong duoc mo
+        if (checkFileModeRead(name) == false && checkFileModeReadWrite(name) == false) {
+            // xoa file
             bool result = Unlink(name);
-            if (result == 0) {
-                return  -1;
+            if (result == 0)
+            {
+                return -1;
             }
-            else {
+            else
+            {
                 return result;
-            }    
+            }
         }
-        else return -1;
+        return -1;
     }
 
     OpenFile *
