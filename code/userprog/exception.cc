@@ -246,17 +246,77 @@ void solve_SC_ReadChar()
 	increasePC();
 }
 
-void solve_SC_PrintChar()
-{
+
+void solve_SC_PrintChar() {
 	DEBUG(dbgSys, "PrintChar: execute the system call \n");
 	char character = (char)kernel->machine->ReadRegister(4);
 	SysPrintChar(character);
 	increasePC();
 }
 
+void solve_SC_Create()
+{
+	DEBUG(dbgSys, "CreatFile: execute the system call \n");
+	const int MAX_STRING = 2048;
+	int virtAddr = kernel->machine->ReadRegister(4);
+	char *fileName = nullptr;
+
+	fileName = user2System(virtAddr, MAX_STRING);
+	int result = SysCreate(fileName);
+	if (result == -1) {
+		DEBUG(dbgSys, "CreatFile: cannot create a new file \n");
+	}
+
+	kernel->machine->WriteRegister(2, result);
+	if (fileName != nullptr) {
+		delete[] fileName;
+		fileName = nullptr;
+	}
+	increasePC();
+}
+
+void solve_SC_Open()
+{
+
+	DEBUG(dbgSys, "OpenFile: execute the system call \n");
+	const int MAX_STRING = 2048;
+	int virtAddr = kernel->machine->ReadRegister(4);
+	char *fileName = nullptr;
+	int result = -1;
+
+	fileName = user2System(virtAddr, MAX_STRING);
+	if (fileName == nullptr)
+	{
+		DEBUG(dbgSys, "OpenFile: cannot read the file name \n");
+		kernel->machine->WriteRegister(2, -1);
+		increasePC();
+		return;
+	}
+
+	int type = kernel->machine->ReadRegister(5);
+	kernel->machine->WriteRegister(2, SysOpen(fileName, type));
+
+	delete fileName;
+	fileName = nullptr;
+	increasePC();
+}
+
+void solve_SC_Close()
+{
+
+	DEBUG(dbgSys, "CloseFile: execute the system call \n");
+	int fileID = kernel->machine->ReadRegister(4);
+	int result = SysClose(fileID);
+	if (result == -1) {
+		DEBUG(dbgSys, "CloseFile: cannot close the file \n");
+	}
+	kernel->machine->WriteRegister(2, result);
+	increasePC();
+}
+
 void solve_SC_Write()
 {
-	DEBUG(dbgSys, "Write: execute the system call \n");
+	DEBUG(dbgSys, "WriteFile: execute the system call \n");
 	int virtAddress = kernel->machine->ReadRegister(4);
 	int charCount = kernel->machine->ReadRegister(5);
 	int id = kernel->machine->ReadRegister(6);
@@ -264,11 +324,32 @@ void solve_SC_Write()
 	int result = SysWrite(buffer, charCount, id);
 	if (result == -1)
 	{
-		DEBUG(dbgSys, "Write: cannot write in file\n");
+		DEBUG(dbgSys, "WriteFile: cannot write in file\n");
 	}
 	delete[] buffer;
 	buffer = nullptr;
 	kernel->machine->WriteRegister(2, result);
+	increasePC();
+}
+
+void solve_SC_Read()
+{
+	DEBUG(dbgSys, "ReadFile: execute the system call \n");
+	int virtAddress = kernel->machine->ReadRegister(4);
+	int charCount = kernel->machine->ReadRegister(5);
+	int id = kernel->machine->ReadRegister(6);
+	char *buffer = user2System(virtAddress, charCount);
+
+	int result = SysRead(buffer, charCount, id);
+	if (result == -1)
+	{
+		DEBUG(dbgSys, "ReadFile: cannot read in file\n");
+	}
+	system2User(buffer, virtAddress, charCount);
+	kernel->machine->WriteRegister(2, result);
+
+	delete[] buffer;
+	buffer = nullptr;
 	increasePC();
 }
 
@@ -288,12 +369,13 @@ void solve_SC_Seek()
 
 void solve_SC_Remove()
 {
-	DEBUG(dbgSys, "Remove: execute the system call \n");
+	DEBUG(dbgSys, "RemoveFile: execute the system call \n");
+	const int MAX_STRING = 2048;
 	int virtAddress = kernel->machine->ReadRegister(4);
-	char *fileName = user2System(virtAddress);
+	char *fileName = user2System(virtAddress, MAX_STRING);
 	int result = SysRemove(fileName);
 	if (result == -1) {
-		DEBUG(dbgSys, "Remove: cannot remove file\n");
+		DEBUG(dbgSys, "RemoveFile: cannot remove file\n");
 	}
 	kernel->machine->WriteRegister(2, result);
 	increasePC();
@@ -408,8 +490,18 @@ void ExceptionHandler(ExceptionType which)
 			return;
 			break;
 
+		case SC_Open:
+			solve_SC_Open();
+			return;
+			break;
+
 		case SC_Write:
 			solve_SC_Write();
+			return;
+			break;
+		
+		case SC_Read:
+			solve_SC_Read();
 			return;
 			break;
 
@@ -420,6 +512,16 @@ void ExceptionHandler(ExceptionType which)
 
 		case SC_Remove:
 			solve_SC_Remove();
+			return;
+			break;
+
+		case SC_Create:
+			solve_SC_Create();
+			return;
+			break;
+
+		case SC_Close:
+			solve_SC_Close();
 			return;
 			break;
 

@@ -191,11 +191,40 @@ void SysPrintChar(char character)
   kernel->synchConsoleOut->PutChar(character);
 }
 
+int SysCreate(char* name) {
+  bool result = kernel->fileSystem->Create(name);
+  if (result == true) {
+    return 0;
+  }
+  else {
+    return -1;
+  }
+}
+
+OpenFileId SysOpen(char* fileName, int type = 0) {
+    if (type != 0 && type != 1) return -1;
+
+    int id = kernel->fileSystem->OpenMode(fileName);
+    if (id == -1) return -1;
+    return id;
+}
+
+int SysClose(OpenFileId id) {
+  return kernel->fileSystem->Close(id);
+}
+
 int SysWrite(char* buffer, int size, OpenFileId id) {
   if (id == 1) {
     SysReadString(buffer, size);
   }
   return kernel->fileSystem->Write(buffer, size, id);
+}
+
+int SysRead(char* buffer, int size, OpenFileId id) {
+  if (id == 1) {
+    SysPrintString(buffer, size);
+  }
+  return kernel->fileSystem->Read(buffer, size, id);
 }
 
 int SysSeek(int pos, OpenFileId id) {
