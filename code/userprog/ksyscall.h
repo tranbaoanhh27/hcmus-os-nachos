@@ -192,18 +192,11 @@ void SysPrintChar(char character)
 }
 
 int SysCreate(char* name) {
-  bool result = kernel->fileSystem->Create(name);
-  if (result == true) {
-    return 0;
-  }
-  else {
-    return -1;
-  }
+  return kernel->fileSystem->Create(name);
 }
 
 OpenFileId SysOpen(char* fileName, int type = 0) {
     if (type != 0 && type != 1) return -1;
-
 
     int id = kernel->fileSystem->OpenMode(fileName, type);
     if (id == -1) return -1;
@@ -241,7 +234,7 @@ int SysSeek(int pos, OpenFileId id) {
 }
 
 int SysRemove(char* fileName) {
-  return (kernel->fileSystem->Remove(fileName) ? 0 : -1);
+  return kernel->fileSystem->Remove(fileName);
 }
 
 // void SysCopyUserKernelUser() {
