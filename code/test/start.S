@@ -233,21 +233,6 @@ PrintString:
 	syscall
 	j	$31
 	.end PrintString
-Write:
-	addiu $2, $0, SC_Write
-	syscall
-	j	$31
-	.end Seek
-Seek:
-	addiu $2, $0, SC_Seek
-	syscall
-	j	$31
-	.end Remove
-Remove:
-	addiu $2, $0, SC_Remove
-	syscall
-	j	$31
-	.end Remove
 
 /* dummy function to keep gcc happy */
         .globl  __main

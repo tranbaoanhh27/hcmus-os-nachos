@@ -204,7 +204,8 @@ int SysCreate(char* name) {
 OpenFileId SysOpen(char* fileName, int type = 0) {
     if (type != 0 && type != 1) return -1;
 
-    int id = kernel->fileSystem->OpenMode(fileName);
+
+    int id = kernel->fileSystem->OpenMode(fileName, type);
     if (id == -1) return -1;
     return id;
 }
@@ -232,7 +233,7 @@ int SysSeek(int pos, OpenFileId id) {
 }
 
 int SysRemove(char* fileName) {
-  return kernel->fileSystem->Remove(fileName);
+  return (kernel->fileSystem->Remove(fileName) ? 0 : -1);
 }
 
 // void SysCopyUserKernelUser() {

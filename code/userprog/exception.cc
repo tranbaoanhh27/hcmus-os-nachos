@@ -338,7 +338,8 @@ void solve_SC_Read()
 	int virtAddress = kernel->machine->ReadRegister(4);
 	int charCount = kernel->machine->ReadRegister(5);
 	int id = kernel->machine->ReadRegister(6);
-	char *buffer = user2System(virtAddress, charCount);
+
+	char *buffer = new char[charCount + 1];
 
 	int result = SysRead(buffer, charCount, id);
 	if (result == -1)
@@ -370,9 +371,9 @@ void solve_SC_Seek()
 void solve_SC_Remove()
 {
 	DEBUG(dbgSys, "RemoveFile: execute the system call \n");
-	const int MAX_STRING = 2048;
+
 	int virtAddress = kernel->machine->ReadRegister(4);
-	char *fileName = user2System(virtAddress, MAX_STRING);
+	char *fileName = user2System(virtAddress, FILENAME_MAX);
 	int result = SysRemove(fileName);
 	if (result == -1) {
 		DEBUG(dbgSys, "RemoveFile: cannot remove file\n");
