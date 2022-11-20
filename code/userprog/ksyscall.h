@@ -215,15 +215,23 @@ int SysClose(OpenFileId id) {
 }
 
 int SysWrite(char* buffer, int size, OpenFileId id) {
-  if (id == 1) {
-    SysReadString(buffer, size);
+  if (id == 0) {
+    return -1;
+  }
+  else if (id == 1) {
+    SysPrintString(buffer, size);
+    return 1;
   }
   return kernel->fileSystem->Write(buffer, size, id);
 }
 
 int SysRead(char* buffer, int size, OpenFileId id) {
-  if (id == 1) {
-    SysPrintString(buffer, size);
+  if (id == 0) {
+    SysReadString(buffer, size);
+    return 1;
+  }
+  else if (id == 1) {
+    return -1;
   }
   return kernel->fileSystem->Read(buffer, size, id);
 }
