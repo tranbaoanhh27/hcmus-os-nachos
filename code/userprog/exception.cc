@@ -356,16 +356,18 @@ void solve_SC_Read()
 	int virtAddress = kernel->machine->ReadRegister(4);
 	int charCount = kernel->machine->ReadRegister(5);
 	int id = kernel->machine->ReadRegister(6);
-	char *buffer = user2System(virtAddress, charCount);
+	DEBUG(dbgSys, "solve_SC_Read(): OpenFileID = " << id);
+	char *buffer = new char[charCount];
 	if (buffer == nullptr)
 	{
-		DEBUG(dbgSys, "ReadFile: cannot read in file\n");
+		DEBUG(dbgSys, "ReadFile: cannot allocate kernel space buffer\n");
 		kernel->machine->WriteRegister(2, -1);
 		increasePC();
 		return;
 	}
 
 	int result = SysRead(buffer, charCount, id);
+	DEBUG(dbgSys, "solve_SC_Read(): SysRead returns " << result);
 	if (result == -1)
 	{
 		DEBUG(dbgSys, "ReadFile: cannot read in file\n");

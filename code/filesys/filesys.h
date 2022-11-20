@@ -295,10 +295,6 @@ public:
         if (fileID < 0)
             return -1;
 
-        if (strlen(buffer) != size) {
-            return -1;
-        }
-
         // tim kiem vi tri cua file
         OpenFile *file = nullptr;
 
