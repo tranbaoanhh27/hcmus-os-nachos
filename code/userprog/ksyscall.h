@@ -237,11 +237,7 @@ int SysSeek(int pos, OpenFileId id) {
 }
 
 int SysRemove(char* fileName) {
-  return kernel->fileSystem->Remove(fileName);
+  return (kernel->fileSystem->Remove(fileName) ? 0 : -1);
 }
-
-// void SysCopyUserKernelUser() {
-
-// }
 
 #endif /* ! __USERPROG_KSYSCALL_H__ */
