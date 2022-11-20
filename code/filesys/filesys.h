@@ -53,14 +53,12 @@ class FileSystem
 private:
     OpenFile ***FileTable;
     int **id;
-
     int **openMode;
     char ***name;
 
 public:
     FileSystem()
     {
-
         // khoi tao bang
         FileTable = new OpenFile **[MAX_PROCESS];
         id = new int *[MAX_PROCESS];
@@ -85,7 +83,7 @@ public:
     {
         for (int i = 0; i < MAX_PROCESS; i++)
         {
-            for (int j = 2; j < MAX_FILE; j++)
+            for (int j = 0; j < MAX_FILE; j++)
             {
                 if (FileTable[i][j] != nullptr)
                 {
@@ -164,14 +162,18 @@ public:
     /*
     Tao file theo voi ten cho truoc
     */
-    bool Create(char *name)
+    int Create(char *name)
     {
+        if (strlen(name) == 0) {
+            return -1;
+        }
+
         int fileDescriptor = OpenForWrite(name);
 
-        if (fileDescriptor == -1)
-            return FALSE;
+        if (fileDescriptor < 0)
+            return -1;
         Close(fileDescriptor);
-        return TRUE;
+        return 0;
     }
 
     /*
@@ -179,6 +181,10 @@ public:
     */
     int OpenMode(char *fileName, int type = 0)
     {
+        if (strlen(fileName) == 0) {
+            return -1;
+        }
+
         int fileDescriptor;
         
         // mo them MODE duoc chi dinh san
@@ -276,7 +282,6 @@ public:
             file = nullptr;
             return result;
         }
-
         // khong tim thay file
         else
         {
@@ -289,6 +294,10 @@ public:
         // file descriptor khong am
         if (fileID < 0)
             return -1;
+
+        if (strlen(buffer) != size) {
+            return -1;
+        }
 
         // tim kiem vi tri cua file
         OpenFile *file = nullptr;
@@ -304,7 +313,7 @@ public:
                 }
             }
         }
-
+        
         // neu tim thay
         if (file != nullptr)
         {
@@ -312,7 +321,6 @@ public:
             file = nullptr;
             return result;
         }
-
         // khong tim thay
         else
         {
@@ -328,7 +336,6 @@ public:
 
         // tim kiem vi tri
         // va tien hanh them OpenFile moi vao bang
-
         OpenFile *file = nullptr;
 
         for (int i = 0; i < MAX_PROCESS; i++)
@@ -362,7 +369,6 @@ public:
             file = nullptr;
             return result;
         }
-
         else // file khong tim thay
         {
             return -1;
@@ -380,7 +386,6 @@ public:
 
         // tim kiem vi tri chua fileID 
         // xoa va lam rong
-
         for (int i = 0; i < MAX_PROCESS; i++)
         {
             for (int j = 2; j < MAX_FILE; j++)
@@ -391,11 +396,9 @@ public:
                     delete FileTable[i][j];
                     FileTable[i][j] = nullptr;
                     id[i][j] = NULL;
-
                     delete name[i][j];
                     name[i][j] = nullptr;
                     openMode[i][j] = NULL;
-
                     Close(fileID);
                     return 0;
                     break;
@@ -406,12 +409,16 @@ public:
         return -1;
     }
 
-    int Remove(char *name)
+    int Remove(char *fileName)
     {
+        if (strlen(fileName) == 0) {
+            return -1;
+        }
+
         // kiem tra neu file khong duoc mo
-        if (checkFileModeRead(name) == false && checkFileModeReadWrite(name) == false) {
+        if (checkFileModeRead(fileName) == false && checkFileModeReadWrite(fileName) == false) {
             // xoa file
-            bool result = Unlink(name);
+            bool result = Unlink(fileName);
             if (result == 0)
             {
                 return -1;
@@ -425,9 +432,9 @@ public:
     }
 
     OpenFile *
-    Open(char *name)
+    Open(char *fileName)
     {
-        int fileDescriptor = OpenForReadWrite(name, FALSE);
+        int fileDescriptor = OpenForReadWrite(fileName, FALSE);
 
         if (fileDescriptor == -1)
             return NULL;
