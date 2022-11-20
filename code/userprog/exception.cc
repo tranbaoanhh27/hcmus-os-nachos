@@ -257,14 +257,13 @@ void solve_SC_PrintChar() {
 void solve_SC_Create()
 {
 	DEBUG(dbgSys, "CreatFile: execute the system call \n");
-	const int MAX_STRING = 2048;
 	int virtAddr = kernel->machine->ReadRegister(4);
 	char *fileName = nullptr;
 
-	fileName = user2System(virtAddr, MAX_STRING);
+	fileName = user2System(virtAddr, FILENAME_MAX);
 	int result = SysCreate(fileName);
 	if (result == -1) {
-		DEBUG(dbgSys, "CreatFile: cannot create a new file \n");
+		DEBUG(dbgSys, "CreateFile: cannot create a new file \n");
 	}
 
 	kernel->machine->WriteRegister(2, result);
@@ -277,14 +276,12 @@ void solve_SC_Create()
 
 void solve_SC_Open()
 {
-
 	DEBUG(dbgSys, "OpenFile: execute the system call \n");
-	const int MAX_STRING = 2048;
 	int virtAddr = kernel->machine->ReadRegister(4);
 	char *fileName = nullptr;
 	int result = -1;
 
-	fileName = user2System(virtAddr, MAX_STRING);
+	fileName = user2System(virtAddr, FILENAME_MAX);
 	if (fileName == nullptr)
 	{
 		DEBUG(dbgSys, "OpenFile: cannot read the file name \n");
@@ -296,7 +293,7 @@ void solve_SC_Open()
 	int type = kernel->machine->ReadRegister(5);
 	kernel->machine->WriteRegister(2, SysOpen(fileName, type));
 
-	delete fileName;
+	delete[] fileName;
 	fileName = nullptr;
 	increasePC();
 }
