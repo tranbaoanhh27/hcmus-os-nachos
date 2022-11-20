@@ -15,6 +15,7 @@
 
 #include "copyright.h"
 #include "errno.h"
+// #include <stdio.h>
 /* system call codes -- used by the stubs to tell the kernel which system call
  * is being asked for
  */
@@ -43,6 +44,8 @@
 #define SC_PrintNum 47
 #define SC_ReadChar 48
 #define SC_PrintChar 49
+
+#define SC_COPYSPACE_KERNEL_USER 50
 
 #ifndef IN_ASM
 
@@ -142,7 +145,7 @@ int Remove(char *name);
 /* Open the Nachos file "name", and return an "OpenFileId" that can 
  * be used to read and write to the file.
  */
-OpenFileId Open(char *name);
+OpenFileId Open(char *name, int type);
 
 /* Write "size" bytes from "buffer" to the open file. 
  * Return the number of bytes actually read on success.
@@ -168,6 +171,7 @@ int Seek(int position, OpenFileId id);
  */
 int Close(OpenFileId id);
 
+void CopySpace_Kernel_User();
 
 /* User-level thread operations: Fork and Yield.  To allow multiple
  * threads to run within a user program. 
@@ -215,4 +219,3 @@ void PrintString(char* buffer);
 #endif /* IN_ASM */
 
 #endif /* SYSCALL_H */
-
