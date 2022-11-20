@@ -267,7 +267,7 @@ void solve_SC_Create()
 		DEBUG(dbgSys, "CreatFile: cannot create a new file \n");
 	}
 
-	kernel->machine->WriteRegister(2, result);
+	kernel->machine->WriteRegister(2, SysCreate(fileName));
 	if (fileName != nullptr) {
 		delete[] fileName;
 		fileName = nullptr;
@@ -338,8 +338,7 @@ void solve_SC_Read()
 	int virtAddress = kernel->machine->ReadRegister(4);
 	int charCount = kernel->machine->ReadRegister(5);
 	int id = kernel->machine->ReadRegister(6);
-
-	char *buffer = new char[charCount + 1];
+	char *buffer = user2System(virtAddress, charCount);
 
 	int result = SysRead(buffer, charCount, id);
 	if (result == -1)
@@ -371,9 +370,9 @@ void solve_SC_Seek()
 void solve_SC_Remove()
 {
 	DEBUG(dbgSys, "RemoveFile: execute the system call \n");
-
+	const int MAX_STRING = 2048;
 	int virtAddress = kernel->machine->ReadRegister(4);
-	char *fileName = user2System(virtAddress, FILENAME_MAX);
+	char *fileName = user2System(virtAddress, MAX_STRING);
 	int result = SysRemove(fileName);
 	if (result == -1) {
 		DEBUG(dbgSys, "RemoveFile: cannot remove file\n");
@@ -517,7 +516,7 @@ void ExceptionHandler(ExceptionType which)
 			break;
 
 		case SC_Create:
-			solve_SC_Create();
+			solve_SC_Open();
 			return;
 			break;
 
