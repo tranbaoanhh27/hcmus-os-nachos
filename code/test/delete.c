@@ -25,10 +25,10 @@ void main()
 
     // Try removing the file
     if (Remove(filename) == -1) {
-        PrintString("FAILED: Can't remove file ");
+        PrintString("\nFAILED: Can't remove file ");
         PrintString(filename);
     } else {
-        PrintString("SUCCESS: Removed file ");
+        PrintString("\nSUCCESS: Removed file ");
         PrintString(filename);
     }
 

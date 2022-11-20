@@ -372,6 +372,7 @@ void solve_SC_Remove()
 	int virtAddress = kernel->machine->ReadRegister(4);
 	char *fileName = user2System(virtAddress, FILENAME_MAX);
 	int result = SysRemove(fileName);
+	DEBUG(dbgSys, "SC_Remove: SysRemove return result = " << result);
 	if (result == -1) {
 		DEBUG(dbgSys, "RemoveFile: cannot remove file\n");
 	}

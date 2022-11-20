@@ -17,6 +17,9 @@
 #include "syscall.h"
 #include <stdint.h>
 
+#define stdin 0
+#define stdout 1
+
 #define _maxNumLen 11
 char _numberBuffer[_maxNumLen + 2];
 
@@ -215,10 +218,10 @@ int SysClose(OpenFileId id) {
 }
 
 int SysWrite(char* buffer, int size, OpenFileId id) {
-  if (id == 0) {
+  if (id == stdin) {
     return -1;
   }
-  else if (id == 1) {
+  else if (id == stdout) {
     SysPrintString(buffer, size);
     return 1;
   }
@@ -226,11 +229,11 @@ int SysWrite(char* buffer, int size, OpenFileId id) {
 }
 
 int SysRead(char* buffer, int size, OpenFileId id) {
-  if (id == 0) {
+  if (id == stdin) {
     SysReadString(buffer, size);
     return 1;
   }
-  else if (id == 1) {
+  else if (id == stdout) {
     return -1;
   }
   return kernel->fileSystem->Read(buffer, size, id);

@@ -43,7 +43,7 @@ void main() {
     fileId2 = Open(filename2, READONLY);
 
     if (fileId1 == -1 || fileId2 == -1) {
-        PrintString("FAILED: Can't open file 1 or file 2\n");
+        PrintString("\nFAILED: Can't open file 1 or file 2\n");
         if (fileId1 != -1) Close(fileId1);
         if (fileId2 != -1) Close(fileId2);
     }
@@ -52,15 +52,15 @@ void main() {
         char buffer[file2Length + 1];
 
         if (Read(buffer, file2Length, fileId2) == -1)
-            PrintString("FAILED: Can't read file 2!\n");
+            PrintString("\nFAILED: Can't read file 2!\n");
         else
         {
             Seek(-1, fileId1);
             buffer[file2Length] = '\0';
             if (Write(buffer, file2Length, fileId1) == -1)
-                PrintString("FAILED: Can't write to file 1!\n");
+                PrintString("\nFAILED: Can't write to file 1!\n");
             else
-                PrintString("SUCCESS: Concatenated file 2 to file 1!\n");
+                PrintString("\nSUCCESS: Concatenated file 2 to file 1!\n");
         }
 
         Close(fileId1);

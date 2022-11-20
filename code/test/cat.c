@@ -41,7 +41,7 @@ void main()
     // If can't open file, show error notification
     if (fileID == -1)
     {
-        PrintString("FAILED: Can't open file ");
+        PrintString("\nFAILED: Can't open file ");
         PrintString(filename);
     }
 
@@ -58,7 +58,7 @@ void main()
         if (Read(buffer, fileLength, fileID) == -1)
         {
             // If can't read file, show error notification
-            PrintString("FAILED: Can't read file ");
+            PrintString("\nFAILED: Can't read file ");
             PrintString(filename);
         }
 
@@ -66,7 +66,7 @@ void main()
         else
         {
             buffer[fileLength] = '\0';
-            PrintString("Content of file ");
+            PrintString("\nSUCCESS: Content of file ");
             PrintString(filename);
             PrintString(":\n");
             PrintString(buffer);

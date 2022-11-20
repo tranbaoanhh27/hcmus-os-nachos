@@ -42,7 +42,7 @@ void main()
 
     if (Create(destFilename) == -1)
     {
-        PrintString("FAILED: Can't create destination file!\n");
+        PrintString("\nFAILED: Can't create destination file!\n");
         return;
     }
 
@@ -50,7 +50,7 @@ void main()
     destFileId = Open(destFilename, READWRITE);
 
     if (sourceFileId == -1 || destFileId == -1) {
-        PrintString("FAILED: Can't open source file or destination file!\n");
+        PrintString("\nFAILED: Can't open source file or destination file!\n");
         if (sourceFileId != -1) Close(sourceFileId);
         if (destFileId != -1) Close(destFileId);
     }
@@ -60,14 +60,14 @@ void main()
         int sourceFileLength = getFileLength(sourceFileId);
         char sourceBuffer[sourceFileLength + 1];
         if (Read(sourceBuffer, sourceFileLength, sourceFileId) == -1)
-            PrintString("FAILED: Can't read source file!\n");
+            PrintString("\nFAILED: Can't read source file!\n");
         else
         {
             sourceBuffer[sourceFileLength] = '\0';
             if (Write(sourceBuffer, sourceFileLength, destFileId) == -1)
-                PrintString("FAILED: Can't write to destination file!\n");
+                PrintString("\nFAILED: Can't write to destination file!\n");
             else
-                PrintString("SUCCESS: Copy file completed!\n");
+                PrintString("\nSUCCESS: Copy file completed!\n");
         }
 
         Close(sourceFileId);
